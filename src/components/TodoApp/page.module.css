@@ -1,25 +1,33 @@
 .container{
     margin: 20px;
-    display: grid;
-    grid-template-rows: min(60px) 1fr;
+    display: flex;
     column-gap: 50px;
+    align-items: center;
 }
 .main-header{
-    grid-row: 1/2;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 282px;
+    color: black;
 }
 .Todo{
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  
     padding: 10px;
-    grid-row: 2/3;
     display: grid;
     grid-template-columns: max(20%,250px) max(20%,250px) max(20%,250px);
     min-height: 300px;
+    min-width:850px ;
     border-radius: 10px;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     width: max(60%,1000px);
     justify-content: center;
     gap: 30px;
+    color: black;
+
 }
 .Todo-Pending{
     grid-column: 1/2;
@@ -27,6 +35,7 @@
     flex-direction: column;
     gap: 20px;
     align-items:  center;
+    word-wrap: break-word;
 }
 .Todo-OnWork{
     grid-column: 2/3;
@@ -34,6 +43,8 @@
     flex-direction: column;
     gap: 20px;
     align-items:  center;
+    word-wrap: break-word;
+
 }
 .Todo-Completed{
     grid-column: 3/4;
@@ -41,12 +52,16 @@
     flex-direction: column;
     gap: 20px;
     align-items:  center;
+    word-wrap: break-word;
 
 }
 .Todo-Flex-Pending{
     display: grid;
     grid-template-columns:75% 20%;
     align-items: center;
+    text-align: center;
+    min-width: 100px;
+
 }
 .Todo-Content-Pending{
     grid-column: 1 / 2;
@@ -55,6 +70,9 @@
     display: grid;
     grid-template-columns:20% 60% 20%;
     align-items: center;
+    text-align: center;
+    min-width: 100px;
+
 }
 .Todo-Content-OnWork{
     grid-column: 2 / 3;
@@ -63,6 +81,8 @@
     display: grid;
     grid-template-columns:20% 75%;
     align-items: center;
+    text-align: center;
+    min-width: 100px;
 }
 .Todo-Content-Completed{
     grid-column: 2 / 3;

@@ -28,8 +28,8 @@ export default function TodoApp(){
     }
     return(<main className={styles["container"]}>
         <header className={styles["main-header"]}>
-            Todo Uygulaması Component
             <div>
+                What are you going to do ? 
             <form onSubmit={(e)=>addNewData(e)}>
                 <input type="text" placeholder="Add New Element" onChange={(e)=>setNewData({...NewData,content:e.target.value})}></input>
                 <button type="submit">Add</button>

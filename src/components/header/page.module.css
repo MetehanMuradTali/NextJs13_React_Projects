@@ -1,0 +1,87 @@
+.header-container{
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    padding: 20px;
+}
+.left-flex{
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+.link-container{
+    display: flex;
+    justify-content: space-between;
+}.brand{
+    display: inline-block;
+    font-size: 30px;
+    display: flex;
+}
+.logo{
+    margin-top: 4px;
+}
+
+/*HAMBURGER */
+
+.checkbox_toggle[type=checkbox] {
+    display: none;
+  } 
+  
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    z-index: 999;
+  }
+  .full-page-green {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    z-index: 997;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 500ms;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  @media (max-width: 900px) {
+    .link-container {
+        display: block;
+        position: fixed;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        visibility: hidden;
+        transform: translate(105%);
+        transition: 1s;
+        z-index: 998;
+        background-color: var(--secondarybtn);
+        text-align: center;
+        padding: 16px 16px;
+      }
+    .checkbox_toggle[type=checkbox]:checked ~ .link-container {
+        transform: translate(0px);
+        visibility: visible;
+
+    }
+    .checkbox_toggle[type=checkbox]:checked ~ .full-page-green {
+        display: block;
+        opacity: 0.5;
+        visibility: visible;
+    }
+    .checkbox_toggle[type=checkbox]:checked ~ .hamburger {
+        position:fixed;
+    }
+    .hamburger {
+        display: inline;
+        position: absolute;
+        top:30px;
+        right:5px;
+      }
+}

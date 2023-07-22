@@ -1,0 +1,29 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+:root{
+    --text: rgb(250, 250, 250);
+    --background: rgb(5, 5, 5);
+    --primary: rgb(8, 129, 35);
+    --secondary: rgb(48, 3, 37);
+    --accent: rgb(111, 246, 140);
+    --primarycontrast: #ffdd00;
+    --secondarycontrast: #64d97b;
+    --accentcontrast: #64d97b;
+    --textcontrast: #64d97b;
+    --bgcontrast: #64d97b
+}
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+.main_container{
+    display: grid;
+    grid-template-columns: 1fr max(1000px, 90%) 1fr;
+    grid-template-rows: 96px auto 72px;
+  }
+  .main_container > *{
+    grid-column: 2;
+  }
+  .main_container > .fluid {
+    grid-column: 1 / -1;
+  }
