@@ -1,0 +1,124 @@
+.container{
+    margin: 20px;
+    display: grid;
+    grid-template-rows: min(60px) 1fr;
+    column-gap: 50px;
+}
+.main-header{
+    grid-row: 1/2;
+}
+.Todo{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  
+    padding: 10px;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: max(20%,250px) max(20%,250px) max(20%,250px);
+    min-height: 300px;
+    border-radius: 10px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    width: max(60%,1000px);
+    justify-content: center;
+    gap: 30px;
+}
+.Todo-Pending{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:  center;
+}
+.Todo-OnWork{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:  center;
+}
+.Todo-Completed{
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:  center;
+
+}
+.Todo-Flex-Pending{
+    display: grid;
+    grid-template-columns:75% 20%;
+    align-items: center;
+}
+.Todo-Content-Pending{
+    grid-column: 1 / 2;
+}
+.Todo-Flex-OnWork{
+    display: grid;
+    grid-template-columns:20% 60% 20%;
+    align-items: center;
+}
+.Todo-Content-OnWork{
+    grid-column: 2 / 3;
+}
+.Todo-Flex-Completed{
+    display: grid;
+    grid-template-columns:20% 75%;
+    align-items: center;
+}
+.Todo-Content-Completed{
+    grid-column: 2 / 3;
+}
+.Todo-Button-Right,.Todo-Button-Left{
+    position: relative;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.Todo-Button-Right{
+    margin-left: 10px;
+}
+.Todo-Button-Left{
+    margin-right: 10px;
+
+}
+.Todo-Button-Right:hover{
+    animation: move-R 1s ease-in-out infinite; 
+
+}
+.Todo-Button-Left:hover{
+    animation: move-L 1s ease-in-out infinite; 
+}
+
+@keyframes move-R {
+    0%{
+        left: 0px;
+        color: #333;
+
+    }
+    50%{
+        left: 5px;
+        color: yellowgreen;
+
+    }
+    100%{
+        left: 0px;
+        color: #333;
+
+    }
+}
+@keyframes move-L {
+    0%{
+        right:0px;
+        color: #333;
+
+    }
+    50%{
+        right:5px;
+        color: yellowgreen;
+
+    }
+    100%{
+        right:0px;
+        color: #333;
+
+    }
+}
